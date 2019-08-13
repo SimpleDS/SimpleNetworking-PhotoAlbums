@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		20E75714230347130027BF51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75713230347130027BF51 /* AppDelegate.m */; };
-		20E75717230347130027BF51 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75716230347130027BF51 /* ViewController.m */; };
 		20E7571A230347130027BF51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E75718230347130027BF51 /* Main.storyboard */; };
 		20E7571C230347140027BF51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20E7571B230347140027BF51 /* Assets.xcassets */; };
 		20E7571F230347140027BF51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20E7571D230347140027BF51 /* LaunchScreen.storyboard */; };
 		20E75722230347140027BF51 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75721230347140027BF51 /* main.m */; };
 		20E7572C230347140027BF51 /* SimpleNetworking_PhotoAlbumsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7572B230347140027BF51 /* SimpleNetworking_PhotoAlbumsTests.m */; };
 		20E75737230347140027BF51 /* SimpleNetworking_PhotoAlbumsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75736230347140027BF51 /* SimpleNetworking_PhotoAlbumsUITests.m */; };
+		20E7574F230348630027BF51 /* AlbumsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E7574E230348630027BF51 /* AlbumsService.m */; };
+		20E75752230356890027BF51 /* AlbumsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75751230356890027BF51 /* AlbumsTableViewController.m */; };
+		20E75757230356E60027BF51 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = 20E75756230356E60027BF51 /* Album.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,6 @@
 		20E7570F230347130027BF51 /* SimpleNetworking-PhotoAlbums.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SimpleNetworking-PhotoAlbums.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E75712230347130027BF51 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		20E75713230347130027BF51 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		20E75715230347130027BF51 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		20E75716230347130027BF51 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		20E75719230347130027BF51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20E7571B230347140027BF51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20E7571E230347140027BF51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +51,12 @@
 		20E75732230347140027BF51 /* SimpleNetworking-PhotoAlbumsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SimpleNetworking-PhotoAlbumsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		20E75736230347140027BF51 /* SimpleNetworking_PhotoAlbumsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleNetworking_PhotoAlbumsUITests.m; sourceTree = "<group>"; };
 		20E75738230347140027BF51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20E7574D230348630027BF51 /* AlbumsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumsService.h; sourceTree = "<group>"; };
+		20E7574E230348630027BF51 /* AlbumsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumsService.m; sourceTree = "<group>"; };
+		20E75750230356890027BF51 /* AlbumsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlbumsTableViewController.h; sourceTree = "<group>"; };
+		20E75751230356890027BF51 /* AlbumsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlbumsTableViewController.m; sourceTree = "<group>"; };
+		20E75755230356E60027BF51 /* Album.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		20E75756230356E60027BF51 /* Album.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +109,9 @@
 			children = (
 				20E75712230347130027BF51 /* AppDelegate.h */,
 				20E75713230347130027BF51 /* AppDelegate.m */,
-				20E75715230347130027BF51 /* ViewController.h */,
-				20E75716230347130027BF51 /* ViewController.m */,
+				20E75754230356B40027BF51 /* Models */,
+				20E75745230347D30027BF51 /* Service */,
+				20E75744230347CC0027BF51 /* UI */,
 				20E75718230347130027BF51 /* Main.storyboard */,
 				20E7571B230347140027BF51 /* Assets.xcassets */,
 				20E7571D230347140027BF51 /* LaunchScreen.storyboard */,
@@ -130,6 +137,41 @@
 				20E75738230347140027BF51 /* Info.plist */,
 			);
 			path = "SimpleNetworking-PhotoAlbumsUITests";
+			sourceTree = "<group>";
+		};
+		20E75744230347CC0027BF51 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				20E75750230356890027BF51 /* AlbumsTableViewController.h */,
+				20E75751230356890027BF51 /* AlbumsTableViewController.m */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		20E75745230347D30027BF51 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				20E7574C2303483F0027BF51 /* Albums */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		20E7574C2303483F0027BF51 /* Albums */ = {
+			isa = PBXGroup;
+			children = (
+				20E7574D230348630027BF51 /* AlbumsService.h */,
+				20E7574E230348630027BF51 /* AlbumsService.m */,
+			);
+			path = Albums;
+			sourceTree = "<group>";
+		};
+		20E75754230356B40027BF51 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20E75755230356E60027BF51 /* Album.h */,
+				20E75756230356E60027BF51 /* Album.m */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +304,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20E75717230347130027BF51 /* ViewController.m in Sources */,
+				20E7574F230348630027BF51 /* AlbumsService.m in Sources */,
+				20E75752230356890027BF51 /* AlbumsTableViewController.m in Sources */,
 				20E75722230347140027BF51 /* main.m in Sources */,
+				20E75757230356E60027BF51 /* Album.m in Sources */,
 				20E75714230347130027BF51 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,14 +480,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U54HPP4QGQ;
 				INFOPLIST_FILE = "SimpleNetworking-PhotoAlbums/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dylansewell.ios.SimpleNetworking-PhotoAlbums";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -452,14 +498,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U54HPP4QGQ;
 				INFOPLIST_FILE = "SimpleNetworking-PhotoAlbums/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dylansewell.ios.SimpleNetworking-PhotoAlbums";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
