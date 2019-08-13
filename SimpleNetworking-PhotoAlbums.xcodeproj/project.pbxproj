@@ -142,8 +142,7 @@
 		20E75744230347CC0027BF51 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				20E75750230356890027BF51 /* AlbumsTableViewController.h */,
-				20E75751230356890027BF51 /* AlbumsTableViewController.m */,
+				20E75758230378CA0027BF51 /* Controllers */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -172,6 +171,15 @@
 				20E75756230356E60027BF51 /* Album.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		20E75758230378CA0027BF51 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20E75750230356890027BF51 /* AlbumsTableViewController.h */,
+				20E75751230356890027BF51 /* AlbumsTableViewController.m */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
